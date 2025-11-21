@@ -2,6 +2,7 @@
     --bg: #0f1724;
     --card: #0b1220;
     --muted: #98a0b3;
+    --text: #e6eef8;
     --accent: #ff5c7c;
     --glass: rgba(255, 255, 255, 0.03);
     --maxw: 1200px;
@@ -16,9 +17,23 @@ body {
     font-family: Inter, system-ui, Segoe UI, Arial;
     background: linear-gradient(180deg, #071026, #071827);
     color: #e6eef8;
-    padding: 20px
+    padding: 20px;
+    color: var(--text);
 }
-
+.brand h1,
+.tag,
+.title,
+.cat,
+.stat .label,
+.test-card,
+.case,
+p,
+h1,
+h2,
+h3,
+h4 {
+    color: var(--text);
+}
 .wrap {
     max-width: var(--maxw);
     margin: auto
