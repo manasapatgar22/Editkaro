@@ -118,23 +118,31 @@ document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal()
 
 function setTheme(theme) {
     if (theme === 'light') {
+
         document.documentElement.style.setProperty('--bg', '#f7f9fc');
         document.documentElement.style.setProperty('--card', '#ffffff');
-        document.documentElement.style.setProperty('--muted', '#6b7280');
+        document.documentElement.style.setProperty('--muted', '#475569');
         document.documentElement.style.setProperty('--accent', '#ff7b96');
+        document.documentElement.style.setProperty('--text', '#0f1724');   // ← text becomes dark
+
         document.body.style.background = 'linear-gradient(180deg,#fff,#f1f5f9)';
         themeToggle.textContent = '🌙';
         localStorage.theme = 'light';
+
     } else {
+
         document.documentElement.style.setProperty('--bg', '#0f1724');
         document.documentElement.style.setProperty('--card', '#0b1220');
         document.documentElement.style.setProperty('--muted', '#98a0b3');
         document.documentElement.style.setProperty('--accent', '#ff5c7c');
+        document.documentElement.style.setProperty('--text', '#e6eef8');   // ← text becomes white
+
         document.body.style.background = 'linear-gradient(180deg,#071026,#071827)';
         themeToggle.textContent = '☀️';
         localStorage.theme = 'dark';
     }
 }
+
 
 themeToggle.onclick = () => { setTheme(localStorage.theme === 'dark' ? 'light' : 'dark'); };
 
