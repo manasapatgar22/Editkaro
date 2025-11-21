@@ -1,0 +1,377 @@
+:root {
+    --bg: #0f1724;
+    --card: #0b1220;
+    --muted: #98a0b3;
+    --accent: #ff5c7c;
+    --glass: rgba(255, 255, 255, 0.03);
+    --maxw: 1200px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, Segoe UI, Arial;
+    background: linear-gradient(180deg, #071026, #071827);
+    color: #e6eef8;
+    padding: 20px
+}
+
+.wrap {
+    max-width: var(--maxw);
+    margin: auto
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px
+}
+
+.left {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    background: conic-gradient(#ff7b96, #ffb37a);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.1rem
+}
+
+.brand h1 {
+    margin: 0;
+    font-size: 1.25rem
+}
+
+.tag {
+    color: var(--muted);
+    margin-top: 4px;
+    font-size: 0.9rem
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 12px
+}
+
+.btn {
+    padding: 10px 14px;
+    border-radius: 10px;
+    border: 0;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.btn.ghost {
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid rgba(255, 255, 255, 0.04)
+}
+
+.btn.primary {
+    background: linear-gradient(90deg, #ff7b96, #ffb37a);
+    color: #071026
+}
+
+.theme-toggle {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px
+}
+
+.hero {
+    display: flex;
+    gap: 24px
+}
+
+.hero-left {
+    flex: 1
+}
+
+.hero-right {
+    flex: 1
+}
+
+.hero-left h2 {
+    margin-top: 0
+}
+
+.stats {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px
+}
+
+.stat {
+    background: var(--glass);
+    padding: 12px;
+    border-radius: 10px;
+    min-width: 110px
+}
+
+.num {
+    font-weight: 800;
+    font-size: 1.2rem
+}
+
+.label {
+    color: var(--muted);
+    font-size: 0.85rem
+}
+
+.search-controls {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 12px
+}
+
+.filter-btn {
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 12px;
+    border-radius: 999px;
+    cursor: pointer;
+    color: var(--muted);
+    font-weight: 600
+}
+
+.filter-btn.active {
+    background: linear-gradient(90deg, #ff7b96, #ffb37a);
+    color: #071026;
+    transform: translateY(-3px)
+}
+
+.search input {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 8px 10px;
+    border-radius: 10px;
+    color: white;
+    min-width: 180px
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px
+}
+
+@media(max-width:1000px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr)
+    }
+}
+
+@media(max-width:620px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+}
+
+.card {
+    background: var(--glass);
+    padding: 10px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    cursor: pointer;
+    transition: 0.25s
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.5)
+}
+
+.thumb {
+    height: 160px;
+    overflow: hidden;
+    border-radius: 8px;
+    background: black;
+    position: relative
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.playbtn {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: rgba(7, 16, 33, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(255, 255, 255, 0.06)
+}
+
+.meta {
+    margin-top: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center
+}
+
+.title {
+    font-weight: 700
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.2s
+}
+
+.modal.open {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.modal-content {
+    width: min(900px, 95vw);
+    background: var(--card);
+    border-radius: 12px;
+    padding: 12px
+}
+
+.video-wrap {
+    position: relative;
+    padding-top: 56.25%
+}
+
+.video-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 8px
+}
+
+.drawer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 360px;
+    background: var(--card);
+    box-shadow: -20px 0 40px rgba(0, 0, 0, 0.6);
+    transform: translateX(100%);
+    transition: 0.28s;
+    padding: 18px
+}
+
+.drawer.open {
+    transform: translateX(0)
+}
+
+.drawer-close {
+    border: 0;
+    background: none;
+    color: var(--muted);
+    font-size: 18px
+}
+
+.testimonials {
+    margin-top: 28px
+}
+
+.test-grid {
+    display: flex;
+    gap: 12px
+}
+
+.test-card {
+    background: var(--glass);
+    padding: 12px;
+    border-radius: 10px
+}
+
+.case-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-top: 12px
+}
+
+.case {
+    background: var(--glass);
+    padding: 12px;
+    border-radius: 10px
+}
+
+.preloader {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #071026, #071827);
+    z-index: 9999
+}
+
+.preloader-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px
+}
+
+.loader-bar {
+    height: 6px;
+    width: 160px;
+    background: rgba(255, 255, 255, 0.06);
+    border-radius: 999px;
+    overflow: hidden
+}
+
+.loader-bar:after {
+    content: "";
+    display: block;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(90deg, #ff7b96, #ffb37a);
+    animation: load 2s linear infinite
+}
+
+@keyframes load {
+    0% {
+        width: 0
+    }
+
+    50% {
+        width: 70%
+    }
+
+    100% {
+        width: 0
+    }
+}
