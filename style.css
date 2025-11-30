@@ -169,11 +169,6 @@ header {
     transform: translateY(-3px)
 }
 
-<<<<<<< HEAD
-.search input {
-=======
-.search input.subscribe .subscribe-form {
->>>>>>> d65e93c (Integreting with excel)
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 8px 10px;
@@ -394,9 +389,6 @@ header {
         width: 0
     }
 }
-<<<<<<< HEAD
-=======
-
 
 
 .team-grid {
@@ -439,4 +431,5 @@ header {
     font-size: 0.95rem;
     color: #777;
 }
->>>>>>> d65e93c (Integreting with excel)
+
+
