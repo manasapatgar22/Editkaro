@@ -169,7 +169,11 @@ header {
     transform: translateY(-3px)
 }
 
+<<<<<<< HEAD
 .search input {
+=======
+.search input.subscribe .subscribe-form {
+>>>>>>> d65e93c (Integreting with excel)
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.06);
     padding: 8px 10px;
@@ -390,3 +394,49 @@ header {
         width: 0
     }
 }
+<<<<<<< HEAD
+=======
+
+
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.team-card {
+    text-align: center;
+    padding: 20px;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 12px;
+    border: 4px solid #eee;
+}
+
+.team-card h4 {
+    margin: 8px 0 4px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.team-card .role {
+    font-size: 0.95rem;
+    color: #777;
+}
+>>>>>>> d65e93c (Integreting with excel)
